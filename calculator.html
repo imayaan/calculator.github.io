@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(win.jpg);
+        background-size: 100% 100%;
+      }
+      .cal {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      form {
+        width: 400px;
+        height: 520px;
+        box-shadow: 0 0 10px 1px gray;
+        margin-top: 40px;
+      }
+      #calname {
+        width: inherit;
+        font-size: 2rem;
+        background-color: #303030;
+        color: white;
+        outline: none;
+        border: none;
+        padding: 2px 10px 2px 10px;
+        height: px;
+      }
+      #calans {
+        width: inherit;
+        height: 100px;
+        background-color: #303030;
+        outline: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        text-align: right;
+      }
+      .layer1 {
+        width: inherit;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+      }
+      input {
+        flex: 1;
+        font-size: 1.4rem;
+        border: 1px solid #504f4f;
+        color: white;
+        outline: none;
+      }
+
+      .layer2 {
+        width: inherit;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+      }
+      button {
+        background-color: grey;
+      }
+      .numpad {
+        background-color: #101011;
+        color: white;
+      }
+      .op {
+        background-color: #303030;
+      }
+      .sop {
+        background-color: #303030;
+      }
+      .numpad:hover {
+        background-color: #303030;
+      }
+      .op:hover {
+        background-color: #101011;
+      }
+      .sop:hover {
+        background-color: #101011;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cal">
+      <form name="caln">
+         <input type="text" value="Calculator" id="calname">
+         <input
+          type="text"
+          value=""
+          name="calans"
+          id="calans"
+          autocomplete="off"
+        />
+        <div class="layer2">
+          <input
+            type="button"
+            value="C"
+            id="clear"
+            onclick="caln.calans.value=''"
+            class="sop"
+          />
+          <input
+            type="button"
+            name=""
+            id="ans"
+            value="="
+            onclick="caln.calans.value=eval(caln.calans.value)"
+            class="sop"
+          />
+        </div>
+        <div class="layer1">
+          <input
+            type="button"
+            value="7"
+            name="numpad"
+            onclick="caln.calans.value+='7'"
+            class="numpad"
+            ;
+          />
+
+          <input
+            type="button"
+            value="8"
+            name="numpad"
+            onclick="caln.calans.value+='8'"
+            class="numpad"
+            ;
+          />
+
+          <input
+            type="button"
+            value="9"
+            name="numpad"
+            onclick="caln.calans.value+='9'"
+            class="numpad"
+            ;
+          />
+
+          <input
+            type="button"
+            value="*"
+            name="numpad"
+            onclick="caln.calans.value+='*'"
+            class="op"
+            ;
+          />
+        </div>
+
+        <div class="layer1">
+          <input
+            type="button"
+            value="4"
+            name="numpad"
+            onclick="caln.calans.value'4'"
+            class="numpad"
+            ;
+          />
+
+          <input
+            type="button"
+            value="5"
+            name="numpad"
+            onclick="caln.calans.value+='5'"
+            class="numpad"
+            ;
+          />
+
+          <input
+            type="button"
+            value="6"
+            name="numpad"
+            onclick="caln.calans.value+='6'"
+            class="numpad"
+            ;
+          />
+
+          <input
+            type="button"
+            value="+"
+            name="numpad"
+            onclick="caln.calans.value+='+'"
+            class="op"
+            ;
+          />
+        </div>
+
+        <div class="layer1">
+          <input
+            type="button"
+            value="1"
+            name="numpad"
+            onclick="caln.calans.value+='2'"
+            class="numpad"
+            ;
+          />
+
+          <input
+            type="button"
+            value="2"
+            name="numpad"
+            onclick="caln.calans.value+='2'"
+            class="numpad"
+            ;
+          />
+
+          <input
+            type="button"
+            value="3"
+            name="numpad"
+            onclick="caln.calans.value+='3'"
+            class="numpad"
+            ;
+          />
+
+          <input
+            type="button"
+            value="-"
+            name="numpad"
+            onclick="caln.calans.value+='-'"
+            class="op"
+            ;
+          />
+        </div>
+
+        <div class="layer1">
+          <input
+            type="button"
+            value="."
+            name="numpad"
+            onclick="caln.calans.value+='.'"
+            class="op"
+            ;
+          />
+
+          <input
+            type="button"
+            value="0"
+            name="numpad"
+            onclick="caln.calans.value+='0'"
+            class="numpad"
+            ;
+          />
+
+          <input
+            type="button"
+            value="%"
+            name="numpad"
+            onclick="caln.calans.value+='%'"
+            class="op"
+            ;
+          />
+
+          <input
+            type="button"
+            value="/"
+            name="numpad"
+            onclick="caln.calans.value+='/'"
+            ;
+            class="op"
+            ;
+          />
+        </div>
+      </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
